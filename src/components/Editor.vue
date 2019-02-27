@@ -60,6 +60,10 @@ export default {
       this.memos.push({
         markdown: "無題のメモ"
       })
+
+      const lastMemo = this.memos.slice(-1)[0]
+      const lastMemoIndex = this.memos.indexOf(lastMemo)
+      this.selectedIndex = lastMemoIndex
     },
     deleteMemo: function() {
       this.memos.splice(this.selectedIndex, 1)
