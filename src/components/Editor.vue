@@ -52,6 +52,9 @@ export default {
       }
     }
   },
+  beforeDestroy: function() {
+    document.onkeydown = null
+  },
   methods: {
     logout: function() {
       firebase.auth().signOut()
